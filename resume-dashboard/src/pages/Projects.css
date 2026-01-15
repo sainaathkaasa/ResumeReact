@@ -1,0 +1,84 @@
+.projects-section {
+    padding: 50px 40px;
+    background: #f8fafc;
+    min-height: 100vh;
+  }
+  
+  .projects-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0f172a;
+  }
+  
+  /* list */
+  .projects-list {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* card */
+  .project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .project-card.open {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+  }
+  
+  /* header */
+  .project-header {
+    padding: 22px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .project-header:hover {
+    background: #f1f5f9;
+  }
+  
+  /* arrow */
+  .arrow {
+    font-size: 14px;
+  }
+  
+  /* body (collapsed by default) */
+  .project-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, padding 0.45s ease;
+    padding: 0 26px;
+  }
+  
+  /* open state */
+  .project-card.open .project-body {
+    max-height: 300px;
+    padding: 0 26px 24px;
+  }
+  
+  /* description */
+  .project-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 14px;
+  }
+  
+  /* tech stack */
+  .project-tech {
+    background: #eef2ff;
+    color: #1e40af;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  

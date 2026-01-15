@@ -1,0 +1,132 @@
+.education-section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .edu-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .edu-timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid #2563eb;
+  }
+  
+  .edu-card {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 30px;
+  }
+  
+  .edu-dot {
+    position: absolute;
+    left: -11px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: #2563eb;
+    border-radius: 50%;
+  }
+  
+  .edu-content {
+    background: #f8fafc;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .edu-content:hover {
+    transform: translateY(-4px);
+  }
+  
+  .edu-level {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  .edu-course {
+    font-size: 16px;
+    color: #475569;
+    margin-bottom: 6px;
+  }
+  
+  .edu-cgpa {
+    font-size: 14px;
+    color: #1e40af;
+    font-weight: 500;
+  }
+  
+  .edu-loading {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 18px;
+  }
+
+
+  .education-section {
+    padding: 50px 40px;
+    background: #f8fafc;
+  }
+  
+  .education-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0f172a;
+  }
+  
+  /* card container */
+  .education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  /* individual card */
+  .education-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* level badge */
+  .edu-level {
+    display: inline-block;
+    background: #1e40af;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  
+  /* course */
+  .edu-course {
+    font-size: 20px;
+    font-weight: 600;
+    color: #020617;
+    margin-bottom: 10px;
+  }
+  
+  /* score */
+  .edu-score {
+    font-size: 16px;
+    color: #334155;
+  }
+  
+  
