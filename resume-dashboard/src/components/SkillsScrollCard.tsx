@@ -5,6 +5,7 @@ import AddSkillModal from "./AddSkillModal";
 import { useAuth } from "./AuthContext";
 import EditSkillModal from "./EditSkillModal";
 import ConfirmDeleteModal from "./ConfirmDeleteModal";
+import api from "../api/api";
 
 type SkillDetails = {
   id: number;
@@ -39,8 +40,8 @@ function SkillsScrollCard({ skills, onSkillAdded }: Props) {
     if (!token) return;
 
     try {
-      await axios.delete(
-        `http://localhost:8080/admin/deletespecificskill?language=${language}`,
+      await api.delete(
+        `/admin/deletespecificskill?language=${language}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -69,8 +70,8 @@ function SkillsScrollCard({ skills, onSkillAdded }: Props) {
       setActiveSkill(language);
       setLoading(true);
 
-      const response = await axios.get(
-        `http://localhost:8080/specificskill?language=${language}`,
+      const response = await api.get(
+        `/specificskill?language=${language}`,
         {
           headers: {
             Authorization: `Bearer ${token}`, // ✅ token from context

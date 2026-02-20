@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Projects.css";
+import api from "../api/api";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/GetProjects")
+    api
+      .get("/GetProjects")
       .then((res) => setProjects(res.data))
       .catch((err) => console.error(err));
   }, []);

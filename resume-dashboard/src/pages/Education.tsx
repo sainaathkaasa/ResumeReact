@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Education.css";
+import api from "../api/api";
 
 export default function Education() {
   const [education, setEducation] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/GetEducation")
+    api
+      .get("/GetEducation")
       .then((res) => setEducation(res.data))
       .catch((err) => console.error(err));
   }, []);

@@ -1,7 +1,8 @@
-import axios from "axios";
+// import axios from "axios";
+import api from "../api/api";
 
-const API_URL = "http://localhost:8080/GetProfile";
+// const API_URL = "http://localhost:9090/GetProfile";
 
 export const getProfile = async () => {
-  return await axios.get(API_URL);
+  return await api.get("/GetProfile");
 };

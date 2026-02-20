@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import api from "../api/api";
 
 function Signup() {
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Signup() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/UserCreate", form);
+      await api.post("/UserCreate", form);
       alert("User created successfully!");
       navigate("/");
     } catch (err) {

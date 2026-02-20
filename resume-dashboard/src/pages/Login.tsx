@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../components/AuthContext";
+import api from "../api/api";
 
 function Login() {
     const { login } = useAuth();
@@ -22,8 +23,8 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "http://localhost:8080/authenticate",
+      const res = await api.post(
+        "/authenticate",
         form
       );
 
