@@ -25,14 +25,17 @@ function Header() {
 
       <div className="actions">
       {username ? (
-          <>
-            <span className="welcome">Welcome, {username}</span>
+            <div className="header-details">
+              <div className="welcome">
+            <h5>Welcome, </h5>
+            <h5> {username}</h5>
+            </div>
 
             {/*  LOGOUT */}
             <button className="btn outline" onClick={handleLogout}>
               Logout
             </button>
-          </>
+            </div>
         ) : (
           <>
             <button

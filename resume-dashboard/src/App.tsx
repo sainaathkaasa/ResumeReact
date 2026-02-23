@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import FloatingNav from "./components/FloatingNav";
 import Education from "./pages/Education";
 import Projects from "./pages/Projects";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
@@ -19,7 +20,20 @@ function App() {
   return (
     <>
       <Header />
+
+      {/* Global Toast Container */}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        newestOnTop
+        closeOnClick={false}
+        pauseOnHover={false}
+        draggable
+        theme="colored"
+        closeButton={false}
+      />
       
+      <div className="main-content">
       {/* Show floating nav ONLY on dashboard (resume page) */}
       {showFloatingNav && <FloatingNav />}
         <Routes>
@@ -31,6 +45,7 @@ function App() {
         </Routes>
      
       <Footer />
+      </div>
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 type AuthContextType = {
   token: string | null;
@@ -33,6 +34,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const logout = () => {
     localStorage.clear();
+    toast.success("Successfully Logged Out");
     setToken(null);
     setRole(null);
   };

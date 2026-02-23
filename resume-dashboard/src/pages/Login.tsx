@@ -1,4 +1,5 @@
 import "./Login.css";
+import { toast } from "react-toastify";
 import { decodeToken } from "../utils/jwt";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -28,10 +29,12 @@ function Login() {
         form
       );
 
-      const token = res.data;
+      const token = res.data.token;
       const decoded = decodeToken(token);
 
-      console.log("sub", decoded.sub);
+      // console.log("sub", decoded.sub);
+
+      toast.success(res.data.message);
 
       //  Save auth details
       localStorage.setItem("token", token);
@@ -42,8 +45,10 @@ function Login() {
       // Go to dashboard
       navigate("/");
 
-    } catch (err) {
-      alert("Invalid username or password");
+    } catch (err:any) {
+      const errorMessage =
+    err.response?.data?.message || "Something went wrong";
+    toast.error(errorMessage);
     }
   };
 

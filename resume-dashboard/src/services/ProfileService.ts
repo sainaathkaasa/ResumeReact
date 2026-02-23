@@ -6,3 +6,7 @@ import api from "../api/api";
 export const getProfile = async () => {
   return await api.get("/GetProfile");
 };
+
+export const upsertProfile = async (Profile : any) => {
+  return await api.post("/UpsertProfile", Profile)
+}

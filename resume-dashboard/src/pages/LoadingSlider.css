@@ -1,0 +1,155 @@
+/* ========================= */
+/* Hero Section */
+/* ========================= */
+
+.hero-section {
+  height: 74vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 30% 20%, #1e293b, #0f172a 70%);
+  position: relative;
+  padding: 10px 10px;
+  overflow: hidden;
+}
+
+/* Make particles stay behind */
+#tsparticles {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ========================= */
+/* Glass Card */
+/* ========================= */
+
+.glass-card {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 10px;
+  border-radius: 18px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========================= */
+/* Name & Role */
+/* ========================= */
+
+.hero-name {
+  font-size: 23px;
+  font-weight: 800;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+}
+
+.hero-role {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 55px;
+  letter-spacing: 1px;
+}
+
+/* ========================= */
+/* Tech Section */
+/* ========================= */
+
+.tech-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.tech-logo {
+  width: 90px;
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+.tech-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tech-text {
+  font-size: 34px;
+  font-weight: 600;
+  color: #38bdf8;
+  transition: 0.3s ease;
+}
+
+/* ========================= */
+/* Logo Glow */
+/* ========================= */
+
+.logo-glow {
+  position: absolute;
+  width: 180px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.4), transparent 70%);
+  border-radius: 50%;
+  filter: blur(35px);
+  z-index: 1;
+}
+
+/* ========================= */
+/* Code Snippet */
+/* ========================= */
+
+.code-snippet {
+  text-align: left;
+  font-size: 10px;
+  font-family: "Fira Code", monospace;
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #22d3ee;
+  line-height: 1.8;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+  overflow-x: auto;
+}
+
+/* ========================= */
+/* Loading Section */
+/* ========================= */
+
+.loading-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(56, 189, 248, 0.3);
+  border-top: 3px solid #38bdf8;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* ========================= */
+/* Animations */
+/* ========================= */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

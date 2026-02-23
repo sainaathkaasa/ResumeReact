@@ -30,4 +30,15 @@
     color: white;
     border: 1px solid #38bdf8;
   }
+
+  .header-details{
+    display: flex;
+  }
+
+  .welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
   

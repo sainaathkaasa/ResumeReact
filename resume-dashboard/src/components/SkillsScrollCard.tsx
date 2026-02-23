@@ -41,7 +41,7 @@ function SkillsScrollCard({ skills, onSkillAdded }: Props) {
 
     try {
       await api.delete(
-        `/admin/deletespecificskill?language=${language}`,
+        `/admin/deleteSpecificSkill?language=${language}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -71,7 +71,7 @@ function SkillsScrollCard({ skills, onSkillAdded }: Props) {
       setLoading(true);
 
       const response = await api.get(
-        `/specificskill?language=${language}`,
+        `/SpecificSkill?language=${language}`,
         {
           headers: {
             Authorization: `Bearer ${token}`, // ✅ token from context

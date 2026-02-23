@@ -3,6 +3,7 @@ import ProfileCard from "../components/ProfileCard";
 import SkillsScrollCard from "../components/SkillsScrollCard";
 import { getProfile } from "../services/ProfileService";
 import { getLanguages } from "../services/skillsService";
+import LoadingSlider from "./LoadingSlider";
 
 function Dashboard() {
   const [profile, setProfile] = useState<any>(null);
@@ -22,7 +23,7 @@ function Dashboard() {
     getLanguages().then(res => setSkills(res.data));
   }, [reloadSkills]);
 
-  if (!profile) return <p>Loading...</p>;
+  if (!profile) return <LoadingSlider />;
 
   return (
     <main
@@ -35,7 +36,9 @@ function Dashboard() {
         alignItems: "center"
       }}
     >
-      <ProfileCard profile={profile} />
+      <ProfileCard profile={profile} onProfileUpdated={() => {
+    getProfile().then(res => setProfile(res.data));
+  }}/>
 
       {/* Skills below profile */}
       <SkillsScrollCard
